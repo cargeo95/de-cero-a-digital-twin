@@ -129,16 +129,3 @@ void loop() {
 
   delay(2000);
 }
-
-const int sensorPin = A0;  // Pin donde está conectado el sensor
-
-void setup() {
-  Serial.begin(9600); // Inicia comunicación con la computadora
-}
-
-void loop() {
-  int valorSensor = analogRead(sensorPin);  // Lee el valor del sensor
-  float temperatura = valorSensor * 0.488; // Convierte el valor en grados Celsius
-  Serial.println(temperatura);             // Muestra la temperatura en el monitor serial
-  delay(1000);                             // Espera 1 segundo
-}
